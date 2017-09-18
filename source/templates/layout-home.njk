@@ -14,25 +14,14 @@
   </head>
   <body class="{{ bodyClass }}">
     <div class="wrapper">
-      <header>
-        <h1>Hello! <br/>
-          I am João Mota, <br/>
-          a Web Developer 👨‍💻<br/>
-          based in Florianópolis, Brazil 
-        </h1>
-
-      </header>
-
-      <main class="projects">
+      {% include "partials/header.njk" %}
+      
+      <main>
+        {% block content %} {% endblock %}
 
       </main>
 
-      <footer>
-        <p>Made with <span class="love">♥</span> in Florianópolis, Brazil</p>
-        <p>Proudly hosted on <a href="https://www.netlify.com" target="_blank">Netlify</a>. Source Code on <a href="https://github.com/joaodfmota/personal-website" target="_blank">Github</p>
-      
-      </footer>
-      
+      {% include "partials/footer.njk" %}
     </div>
 
     <script>

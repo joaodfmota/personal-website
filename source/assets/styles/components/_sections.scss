@@ -1,0 +1,77 @@
+//  
+// 2.1 Sections
+//
+// 2.1.1. Common
+// 2.1.2. Last Projects
+//
+// ==================================================
+// 2.1.1 Common
+// -------------------------------------------------- 
+@include block(section) {
+  @include modifier(last-projects) {
+    padding: $pv-half;
+  }
+
+  @include element(intro) {
+    margin: 0;
+    text-align: right;
+  }
+
+  @include element(desc) {
+    margin: 0;
+    text-align: right;
+  }
+
+  padding: $pv-default;
+}
+
+@include block(section-intro) {
+  margin-bottom: 40px;
+}
+
+// 2.1.2 Last Projects
+// -------------------------------------------------- 
+@include block(last-projects) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -1rem;
+}
+
+@include block(project) {
+  @include element(link) {
+    align-items: flex-end;
+    color: #222;
+    display: flex;
+    height: calc(100% - 4rem);
+    padding: 2rem;
+    position: relative;
+    text-decoration: none;
+    width: calc(100% - 4rem);
+  }
+
+  @include element(title) {
+    margin: 0;
+  }
+
+  @include element(desc) {
+    margin: 0;
+  }
+
+  @include element(country) {
+    margin: 0;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+  }
+
+  background: #f7f5f5;
+  height: 245px;
+  margin: 1rem;
+  transition: .5s box-shadow ease;
+  width: calc(50% - 6rem);
+
+  &:hover {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .1), 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+}

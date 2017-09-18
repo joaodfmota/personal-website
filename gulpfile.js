@@ -44,8 +44,8 @@ gulp.task('watch', function () {
       baseDir: "./dist"
     }
   });
-  gulp.watch('source/**/*.+(html|njk)', ['nunjucks']);
-  gulp.watch([config.source + 'assets/styles/**/*'], ['styles']);
+  gulp.watch([config.source + '**/*.+(html|njk)'], ['nunjucks']);
+  gulp.watch([config.source + 'assets/styles/**/*.+(scss|sass)'], ['styles']);
 });
 
 // ### Nunjucks
