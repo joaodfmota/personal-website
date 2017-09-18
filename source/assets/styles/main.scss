@@ -1,0 +1,27 @@
+body {
+  font-family: 'Raleway', sans-serif;
+}
+.wrapper {
+  margin: 3em auto;
+  max-width: 960px;
+}
+header, main, footer {
+  padding: 0 1em;
+}
+main {
+  padding: 60px 0;
+}
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+footer p {
+  margin: 0;
+}
+footer .love {
+  color: red;
+}
+footer a {
+  color: black;
+}
