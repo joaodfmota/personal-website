@@ -65,12 +65,20 @@ gulp.task('nunjucks', function () {
     }));
 });
 
+// ### Favicon
+// `gulp favicon` - Copy favicon to dist folder.
+gulp.task('favicon', function () {
+  return gulp.src('source/favicon.ico')
+    .pipe(gulp.dest('dist'));
+});
+
 // ### Build
 // `gulp build` - Run all the build tasks but don't clean up beforehand.
 // Generally you should be running `gulp` instead of `gulp build`.
 gulp.task('build', function (callback) {
   runSequence('styles',
     'nunjucks',
+    'favicon',
     callback);
 });
 
