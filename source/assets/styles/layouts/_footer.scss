@@ -11,6 +11,10 @@ footer {
     margin: 0;
   }
 
+  & .heart__icon {
+    margin: 0 5px;
+  }
+
   a {
     color: $c-default;
   }
