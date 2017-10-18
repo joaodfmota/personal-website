@@ -8,21 +8,15 @@
 // 2.1.1 Common
 // -------------------------------------------------- 
 @include block(section) {
-  @include modifier(last-projects) {
-    padding: $pv-half;
-  }
-
   @include element(intro) {
     margin: 0;
-    text-align: right;
   }
 
   @include element(desc) {
     margin: 0;
-    text-align: right;
   }
 
-  padding: $pv-default;
+  padding: $pv-half;
 }
 
 @include block(section-intro) {
